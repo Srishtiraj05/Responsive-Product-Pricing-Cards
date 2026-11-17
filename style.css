@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fbfcfa;
+    color: #18211f;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #e8eeea;
+}
+
+header h2 {
+    color: #176b55;
+}
+
+header a {
+    text-decoration: none;
+    color: #176b55;
+    font-weight: bold;
+}
+
+/* Main Section */
+
+.pricing-section {
+    text-align: center;
+    padding: 70px 5%;
+}
+
+.subtitle {
+    color: #176b55;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+h1 span {
+    color: #176b55;
+}
+
+.description {
+    color: #71807b;
+    line-height: 1.7;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Toggle */
+
+.toggle {
+    margin: 30px 0;
+    display: inline-flex;
+    padding: 5px;
+    background: #edf2ee;
+    border-radius: 10px;
+}
+
+.toggle button {
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.toggle button.active {
+    background: white;
+    color: #176b55;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.discount {
+    color: #176b55;
+    font-size: 11px;
+}
+
+/* Pricing Cards */
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1150px;
+    margin: auto;
+    text-align: left;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border: 1px solid #e5ece7;
+    border-radius: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px #dce7df;
+}
+
+.popular {
+    border: 2px solid #176b55;
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background: #176b55;
+    color: white;
+    padding: 9px 13px;
+    font-size: 10px;
+    border-radius: 0 0 8px 8px;
+    font-weight: bold;
+}
+
+.icon {
+    background: #e9f5ef;
+    color: #176b55;
+    padding: 12px;
+    display: inline-block;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.card h2 {
+    margin-bottom: 8px;
+}
+
+.card > p {
+    color: #71807b;
+    font-size: 13px;
+}
+
+.card h3 {
+    font-size: 40px;
+    margin-top: 25px;
+}
+
+.unit {
+    margin: 5px 0 20px;
+    font-size: 12px;
+}
+
+/* Buttons */
+
+.plan-button {
+    width: 100%;
+    padding: 14px;
+    background: #edf5ef;
+    border: none;
+    border-radius: 8px;
+    color: #176b55;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.plan-button:hover {
+    background: #dcece1;
+}
+
+.featured {
+    background: #176b55;
+    color: white;
+}
+
+.featured:hover {
+    background: #105441;
+}
+
+/* Features */
+
+hr {
+    border: none;
+    border-top: 1px solid #e8eeea;
+    margin: 25px 0;
+}
+
+.card h4 {
+    font-size: 10px;
+    color: #87928d;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 15px 0;
+    color: #53615b;
+    font-size: 13px;
+}
+
+li::first-letter {
+    color: #176b55;
+}
+
+/* Footer */
+
+.footer-text {
+    margin-top: 35px;
+    color: #71807b;
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #e8eeea;
+    color: #71807b;
+    font-size: 12px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 800px) {
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+        max-width: 470px;
+    }
+
+    .popular {
+        order: -1;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .pricing-section {
+        padding: 45px 17px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .card {
+        padding: 23px;
+    }
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
